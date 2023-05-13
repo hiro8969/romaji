@@ -1,3 +1,13 @@
 // Place all the styles related to the romajis controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+button {
+  border-radius: 15%; /* 50%で円形になる */
+  width: 30px; /* 幅 */
+  height: 30px; /* 高さ */
+  margin: 5px; /* ボタンの余白 */
+  font-size: 16px;
+  height: 50px;
+  width: 50px;
+}
