@@ -1,4 +1,7 @@
-<h1>Romaji Converter</h1>
+<h1>ローマ字変換ツール</h1>
+<% if @romaji.present? %>
+  <p><strong>こちらを入力しましょう！ ➡︎ </strong> <%= @romaji %></p>
+<% end %>
 <%= form_tag romaji_path, method: :post do %>
   <%= button_tag "あ", type: "submit", name: "hiragana", value: "あ" %>
   <%= button_tag "い", type: "submit", name: "hiragana", value: "い" %>
@@ -87,13 +90,22 @@
   <%= button_tag "ぺ", type: "submit", name: "hiragana", value: "ぺ" %>
   <%= button_tag "ぽ", type: "submit", name: "hiragana", value: "ぽ" %>
   <br>
+  <br>
   <%= button_tag "きゃ", type: "submit", name: "hiragana", value: "きゃ" %>
   <%= button_tag "きゅ", type: "submit", name: "hiragana", value: "きゅ" %>
   <%= button_tag "きょ", type: "submit", name: "hiragana", value: "きょ" %>
   <br>
+  <%= button_tag "ぎゃ", type: "submit", name: "hiragana", value: "ぎゃ" %>
+  <%= button_tag "ぎゅ", type: "submit", name: "hiragana", value: "ぎゅ" %>
+  <%= button_tag "ぎょ", type: "submit", name: "hiragana", value: "ぎょ" %>
+  <br>
   <%= button_tag "しゃ", type: "submit", name: "hiragana", value: "しゃ" %>
   <%= button_tag "しゅ", type: "submit", name: "hiragana", value: "しゅ" %>
   <%= button_tag "しょ", type: "submit", name: "hiragana", value: "しょ" %>
+  <br>
+  <%= button_tag "じゃ", type: "submit", name: "hiragana", value: "じゃ" %>
+  <%= button_tag "じゅ", type: "submit", name: "hiragana", value: "じゅ" %>
+  <%= button_tag "じょ", type: "submit", name: "hiragana", value: "じょ" %>
   <br>
   <%= button_tag "ちゃ", type: "submit", name: "hiragana", value: "ちゃ" %>
   <%= button_tag "ちゅ", type: "submit", name: "hiragana", value: "ちゅ" %>
@@ -107,22 +119,6 @@
   <%= button_tag "ひゅ", type: "submit", name: "hiragana", value: "ひゅ" %>
   <%= button_tag "ひょ", type: "submit", name: "hiragana", value: "ひょ" %>
   <br>
-  <%= button_tag "みゃ", type: "submit", name: "hiragana", value: "みゃ" %>
-  <%= button_tag "みゅ", type: "submit", name: "hiragana", value: "みゅ" %>
-  <%= button_tag "みょ", type: "submit", name: "hiragana", value: "みょ" %>
-  <br>
-  <%= button_tag "りゃ", type: "submit", name: "hiragana", value: "りゃ" %>
-  <%= button_tag "りゅ", type: "submit", name: "hiragana", value: "りゅ" %>
-  <%= button_tag "りょ", type: "submit", name: "hiragana", value: "りょ" %>
-  <br>
-  <%= button_tag "ぎゃ", type: "submit", name: "hiragana", value: "ぎゃ" %>
-  <%= button_tag "ぎゅ", type: "submit", name: "hiragana", value: "ぎゅ" %>
-  <%= button_tag "ぎょ", type: "submit", name: "hiragana", value: "ぎょ" %>
-  <br>
-  <%= button_tag "じゃ", type: "submit", name: "hiragana", value: "じゃ" %>
-  <%= button_tag "じゅ", type: "submit", name: "hiragana", value: "じゅ" %>
-  <%= button_tag "じょ", type: "submit", name: "hiragana", value: "じょ" %>
-  <br>
   <%= button_tag "びゃ", type: "submit", name: "hiragana", value: "びゃ" %>
   <%= button_tag "びゅ", type: "submit", name: "hiragana", value: "びゅ" %>
   <%= button_tag "びょ", type: "submit", name: "hiragana", value: "びょ" %>
@@ -131,15 +127,16 @@
   <%= button_tag "ぴゅ", type: "submit", name: "hiragana", value: "ぴゅ" %>
   <%= button_tag "ぴょ", type: "submit", name: "hiragana", value: "ぴょ" %>
   <br>
-
-
-
-
+  <%= button_tag "みゃ", type: "submit", name: "hiragana", value: "みゃ" %>
+  <%= button_tag "みゅ", type: "submit", name: "hiragana", value: "みゅ" %>
+  <%= button_tag "みょ", type: "submit", name: "hiragana", value: "みょ" %>
+  <br>
+  <%= button_tag "りゃ", type: "submit", name: "hiragana", value: "りゃ" %>
+  <%= button_tag "りゅ", type: "submit", name: "hiragana", value: "りゅ" %>
+  <%= button_tag "りょ", type: "submit", name: "hiragana", value: "りょ" %>
+  <br>
   
   <%#= label_tag :hiragana, "ひらがな" %>
   <%#= text_field_tag :hiragana, @hiragana %>
   <%= submit_tag "クリア" %>
-<% end %>
-<% if @romaji.present? %>
-  <p><strong>ローマ字:</strong> <%= @romaji %></p>
 <% end %>
