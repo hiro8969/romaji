@@ -1,95 +1,142 @@
-<h1>ローマ字変換ツール</h1>
+<h1>ローマ字変換くん</h1>
+<p>▼ 調べたいひらがなをタップしてください</p>
+<br>
 <% if @romaji.present? %>
-  <p><strong>こちらを入力しましょう！ ➡︎ </strong> <%= @romaji %></p>
+  <p><strong>こちらを入力しましょう！</strong> 
+<div class="answer">  
+  <%= @romaji %></p>
+</div>
 <% end %>
+<br>
+<div class="hiragana-wrapper">
 <%= form_tag romaji_path, method: :post do %>
+  <div class="hiragana-column">
+  あ行
   <%= button_tag "あ", type: "submit", name: "hiragana", value: "あ" %>
   <%= button_tag "い", type: "submit", name: "hiragana", value: "い" %>
   <%= button_tag "う", type: "submit", name: "hiragana", value: "う" %>
   <%= button_tag "え", type: "submit", name: "hiragana", value: "え" %>
   <%= button_tag "お", type: "submit", name: "hiragana", value: "お" %>
   <br>
+  か行
   <%= button_tag "か", type: "submit", name: "hiragana", value: "か" %>
   <%= button_tag "き", type: "submit", name: "hiragana", value: "き" %>
   <%= button_tag "く", type: "submit", name: "hiragana", value: "く" %>
   <%= button_tag "け", type: "submit", name: "hiragana", value: "け" %>
   <%= button_tag "こ", type: "submit", name: "hiragana", value: "こ" %>
   <br>
+  さ行
   <%= button_tag "さ", type: "submit", name: "hiragana", value: "さ" %>
-  <%= button_tag "し", type: "submit", name: "hiragana", value: "し" %>
+  <%= button_tag "し", type: "submit", name: "hiragana", value: "shi,si" %>
   <%= button_tag "す", type: "submit", name: "hiragana", value: "す" %>
   <%= button_tag "せ", type: "submit", name: "hiragana", value: "せ" %>
   <%= button_tag "そ", type: "submit", name: "hiragana", value: "そ" %>
   <br>
+  た行
   <%= button_tag "た", type: "submit", name: "hiragana", value: "た" %>
-  <%= button_tag "ち", type: "submit", name: "hiragana", value: "ち" %>
-  <%= button_tag "つ", type: "submit", name: "hiragana", value: "つ" %>
+  <%= button_tag "ち", type: "submit", name: "hiragana", value: "chi,ti" %>
+  <%= button_tag "つ", type: "submit", name: "hiragana", value: "tsu,tu" %>
   <%= button_tag "て", type: "submit", name: "hiragana", value: "て" %>
   <%= button_tag "と", type: "submit", name: "hiragana", value: "と" %>
   <br>
+  な行
   <%= button_tag "な", type: "submit", name: "hiragana", value: "な" %>
   <%= button_tag "に", type: "submit", name: "hiragana", value: "に" %>
   <%= button_tag "ぬ", type: "submit", name: "hiragana", value: "ぬ" %>
   <%= button_tag "ね", type: "submit", name: "hiragana", value: "ね" %>
   <%= button_tag "の", type: "submit", name: "hiragana", value: "の" %>
   <br>
+  は行
   <%= button_tag "は", type: "submit", name: "hiragana", value: "は" %>
   <%= button_tag "ひ", type: "submit", name: "hiragana", value: "ひ" %>
   <%= button_tag "ふ", type: "submit", name: "hiragana", value: "ふ" %>
   <%= button_tag "へ", type: "submit", name: "hiragana", value: "へ" %>
   <%= button_tag "ほ", type: "submit", name: "hiragana", value: "ほ" %>
   <br>
+  ま行
   <%= button_tag "ま", type: "submit", name: "hiragana", value: "ま" %>
   <%= button_tag "み", type: "submit", name: "hiragana", value: "み" %>
   <%= button_tag "む", type: "submit", name: "hiragana", value: "む" %>
   <%= button_tag "め", type: "submit", name: "hiragana", value: "め" %>
   <%= button_tag "も", type: "submit", name: "hiragana", value: "も" %>
   <br>
+  や行
   <%= button_tag "や", type: "submit", name: "hiragana", value: "や" %>
   <%= button_tag "ゆ", type: "submit", name: "hiragana", value: "ゆ" %>
   <%= button_tag "よ", type: "submit", name: "hiragana", value: "よ" %>
   <br>
+  ら行
   <%= button_tag "ら", type: "submit", name: "hiragana", value: "ら" %>
   <%= button_tag "り", type: "submit", name: "hiragana", value: "り" %>
   <%= button_tag "る", type: "submit", name: "hiragana", value: "る" %>
   <%= button_tag "れ", type: "submit", name: "hiragana", value: "れ" %>
   <%= button_tag "ろ", type: "submit", name: "hiragana", value: "ろ" %>
   <br>
+  わ行
   <%= button_tag "わ", type: "submit", name: "hiragana", value: "わ" %>
   <%= button_tag "を", type: "submit", name: "hiragana", value: "を" %>
   <%= button_tag "ん", type: "submit", name: "hiragana", value: "ん" %>
   <br>
   <br>
+  </div>
+  <div class="hiragana-column">
+  が行
   <%= button_tag "が", type: "submit", name: "hiragana", value: "が" %>
   <%= button_tag "ぎ", type: "submit", name: "hiragana", value: "ぎ" %>
   <%= button_tag "ぐ", type: "submit", name: "hiragana", value: "ぐ" %>
   <%= button_tag "げ", type: "submit", name: "hiragana", value: "げ" %>
   <%= button_tag "ご", type: "submit", name: "hiragana", value: "ご" %>
   <br>
+  ざ行
   <%= button_tag "ざ", type: "submit", name: "hiragana", value: "ざ" %>
   <%= button_tag "じ", type: "submit", name: "hiragana", value: "じ" %>
   <%= button_tag "ず", type: "submit", name: "hiragana", value: "ず" %>
   <%= button_tag "ぜ", type: "submit", name: "hiragana", value: "ぜ" %>
   <%= button_tag "ぞ", type: "submit", name: "hiragana", value: "ぞ" %>
   <br>
+  だ行
   <%= button_tag "だ", type: "submit", name: "hiragana", value: "だ" %>
   <%= button_tag "ぢ", type: "submit", name: "hiragana", value: "ぢ" %>
   <%= button_tag "づ", type: "submit", name: "hiragana", value: "づ" %>
   <%= button_tag "で", type: "submit", name: "hiragana", value: "で" %>
   <%= button_tag "ど", type: "submit", name: "hiragana", value: "ど" %>
   <br>
+  ば行
   <%= button_tag "ば", type: "submit", name: "hiragana", value: "ば" %>
   <%= button_tag "び", type: "submit", name: "hiragana", value: "び" %>
   <%= button_tag "ぶ", type: "submit", name: "hiragana", value: "ぶ" %>
   <%= button_tag "べ", type: "submit", name: "hiragana", value: "べ" %>
   <%= button_tag "ぼ", type: "submit", name: "hiragana", value: "ぼ" %>
   <br>
+  ぱ行
   <%= button_tag "ぱ", type: "submit", name: "hiragana", value: "ぱ" %>
   <%= button_tag "ぴ", type: "submit", name: "hiragana", value: "ぴ" %>
   <%= button_tag "ぷ", type: "submit", name: "hiragana", value: "ぷ" %>
   <%= button_tag "ぺ", type: "submit", name: "hiragana", value: "ぺ" %>
   <%= button_tag "ぽ", type: "submit", name: "hiragana", value: "ぽ" %>
   <br>
+  <br>
+  </div>
+  <div class="hiragana-column">
+  ▼ 小文字一覧
+  <br>
+  <%= button_tag "ぁ", type: "submit", name: "hiragana", value: "ぁ" %>
+  <%= button_tag "ぃ", type: "submit", name: "hiragana", value: "ぃ" %>
+  <%= button_tag "ぅ", type: "submit", name: "hiragana", value: "ぅ" %>
+  <%= button_tag "ぇ", type: "submit", name: "hiragana", value: "ぇ" %>
+  <%= button_tag "ぉ", type: "submit", name: "hiragana", value: "ぉ" %>
+  <br>
+  <%= button_tag "っ", type: "submit", name: "hiragana", value: "xtu" %>
+  <br>
+  <%= button_tag "ゃ", type: "submit", name: "hiragana", value: "ゃ" %>
+  <%= button_tag "ゅ", type: "submit", name: "hiragana", value: "ゅ" %>
+  <%= button_tag "ょ", type: "submit", name: "hiragana", value: "ょ" %>  
+  </div>  
+  <br>
+  <br>
+  </div>
+  <div class="hiragana-column">
+  ▼ 拗音（ようおん）一覧
   <br>
   <%= button_tag "きゃ", type: "submit", name: "hiragana", value: "きゃ" %>
   <%= button_tag "きゅ", type: "submit", name: "hiragana", value: "きゅ" %>
@@ -135,7 +182,8 @@
   <%= button_tag "りゅ", type: "submit", name: "hiragana", value: "りゅ" %>
   <%= button_tag "りょ", type: "submit", name: "hiragana", value: "りょ" %>
   <br>
-  
+  </div>
+</div>
   <%#= label_tag :hiragana, "ひらがな" %>
   <%#= text_field_tag :hiragana, @hiragana %>
   <%= submit_tag "クリア" %>

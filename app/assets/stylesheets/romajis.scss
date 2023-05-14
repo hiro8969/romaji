@@ -11,3 +11,25 @@ button {
   height: 50px;
   width: 50px;
 }
+
+.answer {
+  border: 1px solid black;
+    padding: 5px;
+    width: 320px;
+    height: 35px;
+    text-align: center;
+    margin: 5px 0 0 20px;
+}
+
+.hiragana-wrapper {
+  width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .hiragana-column {
+//   width: calc((100% - 50px) / 3);
+//   margin-bottom: 40px;
+// }
