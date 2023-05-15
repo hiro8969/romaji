@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h2 {
+  font-family: "Darumadrop One";
+}
+
 button {
-  border-radius: 15%; /* 50%で円形になる */
+  border-radius: 5px; /* 50%で円形になる */
   width: 30px; /* 幅 */
   height: 30px; /* 高さ */
   margin: 5px; /* ボタンの余白 */
@@ -13,6 +17,7 @@ button {
 }
 
 .answer {
+  border-radius: 5px;
   border: 1px solid black;
     padding: 5px;
     width: 320px;
@@ -22,6 +27,7 @@ button {
 }
 
 .hiragana-wrapper {
+  margin-left: 10px;
   width: 380px;
   display: flex;
   flex-wrap: wrap;

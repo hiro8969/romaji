@@ -1,12 +1,18 @@
-<h1>ローマ字変換くん</h1>
-<p>▼ 調べたいひらがなをタップしてください</p>
+<header class="header">
+      <div class="inner">
+        <%= link_to image_tag("osudake.png", class: :logo), root_path %>
+      </div>
+    </header>
+<p><strong>▼ 調べたいひらがなをタップしてください</strong></p>
 <br>
+
 <% if @romaji.present? %>
-  <p><strong>こちらを入力しましょう！</strong> 
+  <p><strong>▽ こちらを入力しましょう！
 <div class="answer">  
-  <%= @romaji %></p>
+  <%= @romaji %></strong></p>
 </div>
 <% end %>
+
 <br>
 <div class="hiragana-wrapper">
 <%= form_tag romaji_path, method: :post do %>
@@ -120,70 +126,84 @@
   <div class="hiragana-column">
   ▼ 小文字一覧
   <br>
+  ぁ行
   <%= button_tag "ぁ", type: "submit", name: "hiragana", value: "ぁ" %>
   <%= button_tag "ぃ", type: "submit", name: "hiragana", value: "ぃ" %>
   <%= button_tag "ぅ", type: "submit", name: "hiragana", value: "ぅ" %>
   <%= button_tag "ぇ", type: "submit", name: "hiragana", value: "ぇ" %>
   <%= button_tag "ぉ", type: "submit", name: "hiragana", value: "ぉ" %>
   <br>
+  た行
   <%= button_tag "っ", type: "submit", name: "hiragana", value: "xtu" %>
   <br>
+  ゃ行
   <%= button_tag "ゃ", type: "submit", name: "hiragana", value: "ゃ" %>
   <%= button_tag "ゅ", type: "submit", name: "hiragana", value: "ゅ" %>
   <%= button_tag "ょ", type: "submit", name: "hiragana", value: "ょ" %>  
   </div>  
   <br>
   <br>
-  </div>
   <div class="hiragana-column">
   ▼ 拗音（ようおん）一覧
   <br>
+  きゃ行
   <%= button_tag "きゃ", type: "submit", name: "hiragana", value: "きゃ" %>
   <%= button_tag "きゅ", type: "submit", name: "hiragana", value: "きゅ" %>
   <%= button_tag "きょ", type: "submit", name: "hiragana", value: "きょ" %>
   <br>
+  ぎゃ行
   <%= button_tag "ぎゃ", type: "submit", name: "hiragana", value: "ぎゃ" %>
   <%= button_tag "ぎゅ", type: "submit", name: "hiragana", value: "ぎゅ" %>
   <%= button_tag "ぎょ", type: "submit", name: "hiragana", value: "ぎょ" %>
   <br>
+  しゃ行
   <%= button_tag "しゃ", type: "submit", name: "hiragana", value: "しゃ" %>
   <%= button_tag "しゅ", type: "submit", name: "hiragana", value: "しゅ" %>
   <%= button_tag "しょ", type: "submit", name: "hiragana", value: "しょ" %>
   <br>
+  じゃ行
   <%= button_tag "じゃ", type: "submit", name: "hiragana", value: "じゃ" %>
   <%= button_tag "じゅ", type: "submit", name: "hiragana", value: "じゅ" %>
   <%= button_tag "じょ", type: "submit", name: "hiragana", value: "じょ" %>
   <br>
+  ちゃ行
   <%= button_tag "ちゃ", type: "submit", name: "hiragana", value: "ちゃ" %>
   <%= button_tag "ちゅ", type: "submit", name: "hiragana", value: "ちゅ" %>
   <%= button_tag "ちょ", type: "submit", name: "hiragana", value: "ちょ" %>
   <br>
+  にゃ行
   <%= button_tag "にゃ", type: "submit", name: "hiragana", value: "にゃ" %>
   <%= button_tag "にゅ", type: "submit", name: "hiragana", value: "にゅ" %>
   <%= button_tag "にょ", type: "submit", name: "hiragana", value: "にょ" %>
   <br>
+  ひゃ行
   <%= button_tag "ひゃ", type: "submit", name: "hiragana", value: "ひゃ" %>
   <%= button_tag "ひゅ", type: "submit", name: "hiragana", value: "ひゅ" %>
   <%= button_tag "ひょ", type: "submit", name: "hiragana", value: "ひょ" %>
   <br>
+  びゃ行
   <%= button_tag "びゃ", type: "submit", name: "hiragana", value: "びゃ" %>
   <%= button_tag "びゅ", type: "submit", name: "hiragana", value: "びゅ" %>
   <%= button_tag "びょ", type: "submit", name: "hiragana", value: "びょ" %>
   <br>
+  ぴゃ行
   <%= button_tag "ぴゃ", type: "submit", name: "hiragana", value: "ぴゃ" %>
   <%= button_tag "ぴゅ", type: "submit", name: "hiragana", value: "ぴゅ" %>
   <%= button_tag "ぴょ", type: "submit", name: "hiragana", value: "ぴょ" %>
   <br>
+  みゃ行
   <%= button_tag "みゃ", type: "submit", name: "hiragana", value: "みゃ" %>
   <%= button_tag "みゅ", type: "submit", name: "hiragana", value: "みゅ" %>
   <%= button_tag "みょ", type: "submit", name: "hiragana", value: "みょ" %>
   <br>
+  りゃ行
   <%= button_tag "りゃ", type: "submit", name: "hiragana", value: "りゃ" %>
   <%= button_tag "りゅ", type: "submit", name: "hiragana", value: "りゅ" %>
   <%= button_tag "りょ", type: "submit", name: "hiragana", value: "りょ" %>
   <br>
+     </div>
+    </div>
   </div>
-</div>
   <%#= label_tag :hiragana, "ひらがな" %>
   <%#= text_field_tag :hiragana, @hiragana %>
   <%= submit_tag "クリア" %>
